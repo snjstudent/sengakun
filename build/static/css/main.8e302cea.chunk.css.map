@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,UAEE,UAAW,CAEX,WAAY,CACZ,SAAU,CACV,QACF,CAEA,aACE,eAAgB,CAChB,cACF","file":"main.8e302cea.chunk.css","sourcesContent":["body,\nhtml {\n  width: 100%;\n  margin: 0px;\n  height: 100%;\n  padding: 0;\n  margin: 0;\n}\n\n.selectphoto {\n  margin-top: 2rem;\n  font-size: 1rem;\n}\n"]}

@@ -1,0 +1,13 @@
+body,
+html {
+  width: 100%;
+  margin: 0px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.selectphoto {
+  margin-top: 2rem;
+  font-size: 1rem;
+}

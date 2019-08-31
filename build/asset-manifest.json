@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8e302cea.chunk.css",
+    "main.js": "/static/js/main.9c68edd1.chunk.js",
+    "main.js.map": "/static/js/main.9c68edd1.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a34bbc5c.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a34bbc5c.js.map",
+    "static/js/2.a4076aa3.chunk.js": "/static/js/2.a4076aa3.chunk.js",
+    "static/js/2.a4076aa3.chunk.js.map": "/static/js/2.a4076aa3.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.aa43f5c371caf001c413089fb6aee331.js": "/precache-manifest.aa43f5c371caf001c413089fb6aee331.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8e302cea.chunk.css.map": "/static/css/main.8e302cea.chunk.css.map",
+    "static/media/canny.jpg": "/static/media/canny.d25fe279.jpg",
+    "static/media/laplacian.jpg": "/static/media/laplacian.d25fe279.jpg",
+    "static/media/resize.jpeg": "/static/media/resize.0f3ac890.jpeg",
+    "static/media/sobel.jpg": "/static/media/sobel.d25fe279.jpg"
+  }
+}
