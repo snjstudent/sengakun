@@ -1,1 +1,1 @@
-web: python flasknode/test.py
+web: gunicorn run:app --log-file -
