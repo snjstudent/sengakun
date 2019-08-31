@@ -46,7 +46,7 @@ enum34==1.1.6
 et-xmlfile==1.0.1
 fake-useragent==0.1.11
 feedparser==5.2.1
-Flask==1.1.1
+flask==1.1.1
 future==0.17.1
 gast==0.2.0
 gensim==3.6.0
