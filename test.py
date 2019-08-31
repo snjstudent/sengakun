@@ -66,6 +66,8 @@ def main():
             image = sobel(image)
         imagename = types + "test.jpg"
         cv2.imwrite(imagename, image)
+    else:
+        pass
     return render_template("index.html")
 
     """

@@ -51,6 +51,7 @@ future==0.17.1
 gast==0.2.0
 gensim==3.6.0
 grpcio==1.16.0
+gunicorn==19.9.0
 h5py==2.8.0
 idna==2.7
 idna-ssl==1.1.0
