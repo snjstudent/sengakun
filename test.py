@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request
 import cv2
 import numpy as np
@@ -85,7 +86,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    app.run()
     """
        app.debug = True
        app.run(host='0.0.0.0', port=8000)
