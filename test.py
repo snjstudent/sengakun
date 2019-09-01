@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import numpy as np
-from flask import Flask, render_template, request
 import cv2
+from flask import Flask, render_template, request
+
 
 # 全ての画像に共通する処理を行う
 
@@ -88,7 +89,8 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run()
+    main()
+    # app.run()
     """
        app.debug = True
        app.run(host='0.0.0.0', port=8000)
