@@ -50,7 +50,7 @@ def canny(img):
     return canny_img
 
 
-SAVE_DIR = "./image_maked"
+SAVE_DIR = "./build/static/image_maked"
 if not os.path.isdir(SAVE_DIR):
     os.mkdir(SAVE_DIR)
 
@@ -83,7 +83,7 @@ def main():
             image = laplacian(image)
         elif types == "Sobel":
             image = sobel(image)
-        save_path = os.path.join("./src/images/newimage" + ".png")
+        save_path = os.path.join("./build/staic/images/newimage" + ".png")
         cv2.imwrite(save_path, image)
         send_from_directory("./", save_path,
                             attachment_filename=save_path)
