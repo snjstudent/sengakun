@@ -50,10 +50,14 @@ def canny(img):
 app = Flask(__name__, static_folder="./build/static",
             template_folder="./build")
 
+
+@app.route('/')
+def index():
+    return render_template("index.html")
+
 # main関数
 @app.route('/', methods=['POST', 'GET'])
 def main():
-    """
     if request.method == "POST":
         image = request.files['photo'].stream
         types = request.form["type"]
@@ -70,7 +74,6 @@ def main():
         cv2.imwrite(imagename, image)
     else:
         pass
-    """
     return render_template("index.html")
 
     """
@@ -90,9 +93,6 @@ def main():
     """
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
-    """
-       app.debug = True
-       app.run(host='0.0.0.0', port=8000)
-       """
+# if __name__ == "__main__":
+    # for debug
+    # app.run(debug=True)
