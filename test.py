@@ -53,6 +53,7 @@ def canny(img):
     return canny_img
 
 
+"""
 currentdir = os.getcwd()
 print(currentdir)
 SAVE_DIR = currentdir + "/images"
@@ -60,7 +61,7 @@ SAVE_DIR = currentdir + "/images"
 if not os.path.isdir(SAVE_DIR):
     os.mkdir(SAVE_DIR)
 
-
+"""
 app = Flask(__name__, static_folder="./build/static",
             template_folder="./build")
 
@@ -91,8 +92,8 @@ def main():
         elif types == "Sobel":
             image = sobel(image)
             image = np.uint8(np.abs(image))
-        save_path = os.path.join(currentdir+"images/newimage" + ".png")
-        cv2.imwrite(save_path, image)
+        #save_path = os.path.join(currentdir+"images/newimage" + ".png")
+        #cv2.imwrite(save_path, image)
         print(image)
         buf = io.BytesIO()
         imaged = Image.fromarray(np.uint8(image))
@@ -112,7 +113,8 @@ def main():
         pass
     return render_template("index.html")
 
-
+"""
 if __name__ == "__main__":
     # for debug
     app.run(debug=True)
+"""
