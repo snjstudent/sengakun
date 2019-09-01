@@ -49,7 +49,7 @@ def canny(img):
 app = Flask(__name__, static_folder="./build/static",
             template_folder="./build")
 
-
+# main関数
 @app.route('/', methods=['POST', 'GET'])
 def main():
     if request.method == "POST":
