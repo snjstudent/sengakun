@@ -5,7 +5,10 @@ import cv2
 import os
 import string
 import random
-
+from PIL import Image
+import io
+import base64
+from jinja2 import Environment, FileSystemLoader
 
 # 全ての画像に共通する処理を行う
 
@@ -75,28 +78,34 @@ def index():
 def main():
 
     if request.method == "POST":
-        image = request.files['photo'].stream
+        images = request.files['photo'].stream
         types = request.form["type"]
-        image = np.asarray(bytearray(image.read()), dtype=np.uint8)
+        image = np.asarray(bytearray(images.read()), dtype=np.uint8)
         # encodeしたものを再びdecodeする
         image = cv2.imdecode(image, 1)
         if types == "Canny":
             image = canny(image)
         elif types == "Laplacian":
             image = laplacian(image)
+            image = np.uint8(np.abs(image))
         elif types == "Sobel":
             image = sobel(image)
+            image = np.uint8(np.abs(image))
         save_path = os.path.join(currentdir+"images/newimage" + ".png")
         cv2.imwrite(save_path, image)
-        send_from_directory(currentdir, save_path,
-                            attachment_filename=save_path)
-        """
-        env = Environment(loader=FileSystemLoader("."))
+        print(image)
+        buf = io.BytesIO()
+        imaged = Image.fromarray(np.uint8(image))
+        imaged.save(buf, 'png')
+        qr_b64str = base64.b64encode(buf.getvalue()).decode("utf-8")
+        qr_b64data = "data:imaged/png;base64,{}".format(qr_b64str)
+
+        env = Environment(loader=FileSystemLoader("./src/templates"))
         template = env.get_template("index.html")
-        print(os.listdir(SAVE_DIR)[-1])
-        return template.render(images=os.listdir(SAVE_DIR)[-1])
+        return template.render(images=qr_b64data)
         """
-        return render_template("index.html", imgs=save_path)
+        return render_template("index.html", imgs=qr_b64data)
+        """
 
     else:
         print("main")

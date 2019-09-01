@@ -1,11 +1,11 @@
-{% extends "layout.html" %} {% block content %} 
-{% if images %}
+{% extends "layout.html" %} {% block content %} {% if images %}
 <div>
   <img
-    src="images"
-    style="margin-top: 10px; vertical-align: bottom; width: 200px;"
+    src={{
+    images
+    }}
+    style="margin-top: 10px; vertical-align: bottom;"
   />
-
 </div>
 {% endif %}
 <a href="/">戻る</a>{% endblock %}

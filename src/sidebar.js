@@ -16,8 +16,8 @@ import StarBorder from "@material-ui/icons/StarBorder";
 const useStyles = makeStyles(theme => ({
   root: {
     marginTop: "7rem",
+    marginBottom: "7rem",
     width: "100%",
-    maxWidth: 360,
     backgroundColor: theme.palette.background.paper
   },
   nested: {
@@ -39,7 +39,7 @@ const Sidebar = () => {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
+          I Plan On Using This
         </ListSubheader>
       }
       className={classes.root}
@@ -48,19 +48,19 @@ const Sidebar = () => {
         <ListItemIcon>
           <SendIcon />
         </ListItemIcon>
-        <ListItemText primary="Sent mail" />
+        <ListItemText primary="Comming" />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
-        <ListItemText primary="Drafts" />
+        <ListItemText primary="soon" />
       </ListItem>
       <ListItem button onClick={handleClick}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="or" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -69,7 +69,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Starred" />
+            <ListItemText primary="later..." />
           </ListItem>
         </List>
       </Collapse>

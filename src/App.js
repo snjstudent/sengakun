@@ -5,12 +5,11 @@ import Explainbox from "./Explainbox";
 import Mainbox from "./Mainbox";
 import Photobox from "./photobox";
 import Sidebar from "./sidebar";
-import newimage from "./images/newimage.png";
+import Footer from "./Footer";
 import db from "./firebase";
 
-
 var dousiyoumonai =
-  '<img src={newimage} style="margin-top: 10px; vertical-align: bottom; width: 200px;"/>';
+  '<img src={{images}} style="margin-top: 10px; vertical-align: bottom; width: 200px;"/>';
 
 const App = () => (
   <React.Fragment>
@@ -21,11 +20,12 @@ const App = () => (
       <script src="/__/firebase/init.js"></script>
       <Photobox />
       <Mainbox />
-      {
-        //<div dangerouslySetInnerHTML={{ __html: dousiyoumonai }}></div>
-      }
+      {/*
+      <div dangerouslySetInnerHTML={{ __html: dousiyoumonai }}></div>
       <img src={newimage}></img>
+      */}
       <Sidebar />
+      <Footer />
     </div>
   </React.Fragment>
 );
