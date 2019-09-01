@@ -2,9 +2,7 @@ Flask
 opencv-python
 numpy
 gunicorn
-os
 string
-random
 datetime
 jinja2
 

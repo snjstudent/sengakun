@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, request, redirect, send_from_directory
+from flask import Flask, render_template, request, redirect, send_from_directory, send_file
 import numpy as np
 import cv2
 import os
 import string
 import random
 from datetime import datetime
-from jinja2 import Template, Environment, FileSystemLoader
+
 
 # 全ての画像に共通する処理を行う
 
@@ -65,11 +65,13 @@ def index():
     print("index")
     return render_template("index.html")
 
+
 # main関数
 
 
 @app.route('/', methods=['POST', 'GET'])
 def main():
+
     if request.method == "POST":
         image = request.files['photo'].stream
         types = request.form["type"]
@@ -82,17 +84,18 @@ def main():
             image = laplacian(image)
         elif types == "Sobel":
             image = sobel(image)
-        save_path = os.path.join("./image_maked/newimage" + ".png")
+        save_path = os.path.join("./src/images/newimage" + ".png")
         cv2.imwrite(save_path, image)
-        print(os.listdir(SAVE_DIR)[-1])
-        print(save_path)
+        send_from_directory("./", save_path,
+                            attachment_filename=save_path)
         """
         env = Environment(loader=FileSystemLoader("."))
         template = env.get_template("index.html")
         print(os.listdir(SAVE_DIR)[-1])
         return template.render(images=os.listdir(SAVE_DIR)[-1])
         """
-        return render_template("index.html", imgs=os.listdir(SAVE_DIR)[-1])
+        return render_template("index.html", imgs=save_path)
+
     else:
         print("main")
         pass
