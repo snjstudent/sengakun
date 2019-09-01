@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
-import cv2
 from flask import Flask, render_template, request
+import cv2
 
 
 # 全ての画像に共通する処理を行う
