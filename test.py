@@ -5,7 +5,6 @@ import cv2
 import os
 import string
 import random
-from datetime import datetime
 
 
 # 全ての画像に共通する処理を行う

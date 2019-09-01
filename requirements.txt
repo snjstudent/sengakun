@@ -2,7 +2,5 @@ Flask
 opencv-python
 numpy
 gunicorn
-string
-datetime
 jinja2
 
