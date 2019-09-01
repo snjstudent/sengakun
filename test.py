@@ -71,7 +71,7 @@ def main():
     else:
         pass
     """
-    return render_template("build/index.html")
+    return render_template("index.html")
 
     """
     img = "/Users/rem_0202/Downloads/resize.jpeg"
@@ -91,8 +91,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    # app.run()
+    app.run()
     """
        app.debug = True
        app.run(host='0.0.0.0', port=8000)
