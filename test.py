@@ -71,7 +71,7 @@ def main():
     else:
         pass
     """
-    return render_template("index.html")
+    return render_template("build/index.html")
 
     """
     img = "/Users/rem_0202/Downloads/resize.jpeg"
