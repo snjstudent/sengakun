@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dcfc1a57493f7be3fedf6bf28e128d0",
+    "revision": "65f6714b090ce39d5f37111e0e246dc9",
     "url": "/index.html"
   },
   {
-    "revision": "b5e8c15126a47ad51fd7",
+    "revision": "5c86b3fc1ceff925786c",
     "url": "/static/css/main.8e302cea.chunk.css"
   },
   {
-    "revision": "5d3b910d7cba7cacbe06",
-    "url": "/static/js/2.ec29f133.chunk.js"
+    "revision": "3ee02695d7053bedb1c0",
+    "url": "/static/js/2.7cbc120b.chunk.js"
   },
   {
-    "revision": "b5e8c15126a47ad51fd7",
-    "url": "/static/js/main.b6cbcf37.chunk.js"
+    "revision": "5c86b3fc1ceff925786c",
+    "url": "/static/js/main.8186f498.chunk.js"
   },
   {
     "revision": "b07ae59e9d376893050f",
@@ -26,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d25fe279e21f83ae5672fd1b1dcdd296",
     "url": "/static/media/laplacian.d25fe279.jpg"
-  },
-  {
-    "revision": "b6e2b44b1e7ec811ea5bfb2a43f9bebe",
-    "url": "/static/media/newimage.b6e2b44b.png"
   },
   {
     "revision": "0f3ac890c7aef2f5e29ce3d1b966aed5",
