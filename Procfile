@@ -1,1 +1,1 @@
-web: gunicorn flasknode/test:main --log-file -
+web: gunicorn test:main --log-file -
